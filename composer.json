@@ -21,6 +21,7 @@
         "symfony/twig-bundle": ">=7.3",
         "symfony/yaml": ">=7.3",
         "symfonycasts/tailwind-bundle": "^0.10.0",
+        "tales-from-a-dev/flowbite-bundle": "^0.8.0",
         "twig/extra-bundle": "^3.21",
         "twig/twig": "^3.21.1"
     },
