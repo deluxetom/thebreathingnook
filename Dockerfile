@@ -135,4 +135,4 @@ RUN if [ "$APP_ENV" != "prod" ]; then \
     chmod +x bin/console; sync; fi
 
 # Assets
-RUN npm install && npm run build
+RUN ./bin/console tailwind:build --minify -v
