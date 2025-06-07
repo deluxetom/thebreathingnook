@@ -1,0 +1,79 @@
+{
+    "name": "deluxetom/thebreathingnook.com",
+    "license": "Proprietary",
+    "type": "project",
+    "description": "Main website for thebreathingnook.com",
+    "version": "0.1.0",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": ">=8.4",
+        "ext-ctype": "*",
+        "ext-iconv": "*",
+        "symfony/asset": ">=7.3",
+        "symfony/asset-mapper": ">=7.3",
+        "symfony/console": ">=7.3",
+        "symfony/dotenv": ">=7.3",
+        "symfony/flex": "^2.7.1",
+        "symfony/framework-bundle": ">=7.3",
+        "symfony/runtime": ">=7.3",
+        "symfony/stimulus-bundle": "^2.26",
+        "symfony/twig-bundle": ">=7.3",
+        "symfony/yaml": ">=7.3",
+        "twig/extra-bundle": "^3.21",
+        "twig/twig": "^3.21.1"
+    },
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": true,
+            "symfony/flex": true,
+            "symfony/runtime": true
+        },
+        "bump-after-update": true,
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "App\\Tests\\": "tests/"
+        }
+    },
+    "replace": {
+        "symfony/polyfill-ctype": "*",
+        "symfony/polyfill-iconv": "*",
+        "symfony/polyfill-php72": "*",
+        "symfony/polyfill-php73": "*",
+        "symfony/polyfill-php74": "*",
+        "symfony/polyfill-php80": "*",
+        "symfony/polyfill-php81": "*",
+        "symfony/polyfill-php82": "*",
+        "symfony/polyfill-php83": "*",
+        "symfony/polyfill-php84": "*"
+    },
+    "scripts": {
+        "auto-scripts": {
+            "cache:clear": "symfony-cmd",
+            "assets:install %PUBLIC_DIR%": "symfony-cmd",
+            "importmap:install": "symfony-cmd"
+        },
+        "post-install-cmd": [
+            "@auto-scripts"
+        ],
+        "post-update-cmd": [
+            "@auto-scripts"
+        ]
+    },
+    "conflict": {
+        "symfony/symfony": "*"
+    },
+    "extra": {
+        "symfony": {
+            "allow-contrib": false,
+            "require": "*"
+        }
+    }
+}
