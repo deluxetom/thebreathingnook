@@ -1,0 +1,22 @@
+2025-06-07 16:52:57,852 WARN For [program:php-fpm], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2025-06-07 16:52:57,852 INFO Included extra file "/etc/supervisor/conf.d/caddy.conf" during parsing
+2025-06-07 16:52:57,852 INFO Included extra file "/etc/supervisor/conf.d/php-fpm.conf" during parsing
+2025-06-07 16:52:57,852 INFO Set uid to user 0 succeeded
+2025-06-07 16:52:57,854 INFO RPC interface 'supervisor' initialized
+2025-06-07 16:52:57,855 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2025-06-07 16:52:57,855 INFO supervisord started with pid 17
+2025-06-07 16:52:58,861 INFO spawned: 'php-fpm_00' with pid 18
+2025-06-07 16:52:58,864 INFO spawned: 'caddy' with pid 19
+2025-06-07 16:52:58,890 INFO success: php-fpm_00 entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2025-06-07 16:52:59,970 INFO success: caddy entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-06-07 16:58:54,565 WARN For [program:php-fpm], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2025-06-07 16:58:54,566 INFO Included extra file "/etc/supervisor/conf.d/caddy.conf" during parsing
+2025-06-07 16:58:54,566 INFO Included extra file "/etc/supervisor/conf.d/php-fpm.conf" during parsing
+2025-06-07 16:58:54,566 INFO Set uid to user 0 succeeded
+2025-06-07 16:58:54,568 INFO RPC interface 'supervisor' initialized
+2025-06-07 16:58:54,568 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2025-06-07 16:58:54,569 INFO supervisord started with pid 17
+2025-06-07 16:58:55,576 INFO spawned: 'php-fpm_00' with pid 18
+2025-06-07 16:58:55,578 INFO spawned: 'caddy' with pid 19
+2025-06-07 16:58:55,612 INFO success: php-fpm_00 entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2025-06-07 16:58:56,622 INFO success: caddy entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)

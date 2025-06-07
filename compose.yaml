@@ -1,0 +1,66 @@
+version: '3.7'
+
+services:
+  # Webserver
+  webserver:
+    image: caddy:2-alpine
+    container_name: btn-webserver
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - caddy-data:/data
+      - caddy-config:/config
+      - ./docker/Caddyfile:/etc/caddy/Caddyfile:cached
+    networks:
+      btn:
+        aliases:
+          - dev.thebreathingnook.com
+          - dev.www.thebreathingnook.com
+
+  redis:
+    image: redis:alpine
+    command: redis-server --appendonly yes
+    ports:
+      - "6379:6379"
+    volumes:
+      - 'redis-data:/data'
+    networks:
+      - btn
+
+  # Apps
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: local
+    environment:
+      # https://github.com/dunglas/symfony-docker/blob/main/docs/xdebug.md
+      XDEBUG_MODE: "${XDEBUG_MODE:-off}"
+      APP_DEBUG: 1
+      APP_ENV: dev
+    ports:
+      - "9001:9001"
+      - "9003:9003" # Xdebug
+    depends_on:
+      - redis
+      - webserver
+    extra_hosts:
+      # Ensure that host.docker.internal is correctly defined on Linux
+      - host.docker.internal:host-gateway
+    volumes:
+      - './:/app:cached'
+      - './vendor:/app/vendor:delegated'
+      - './node_modules:/app/node_modules:delegated'
+      - './var:/app/var:delegated'
+    networks:
+      - btn
+
+volumes:
+  mysql-data:
+  caddy-data: null
+  caddy-config:
+  redis-data:
+
+networks:
+  btn:

@@ -1,0 +1,13 @@
+dev.thebreathingnook.com {
+    reverse_proxy app:9001
+    tls internal
+
+    log {
+        output stdout
+        format console
+        level error
+    }
+
+    push
+    encode gzip
+}
