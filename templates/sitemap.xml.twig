@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+{% for link in links -%}
+    <url>
+        <loc>{{ link.loc }}</loc>
+        {% if link.updated is defined -%}
+            <lastmod>{{ link.updated|date('Y-m-d\\TH:i:sP') }}</lastmod>
+        {% else -%}
+            <lastmod>{{ 'now'|date('Y-m-d\\TH:i:sP') }}</lastmod>
+        {% endif -%}
+        {% if link.changefreq is defined -%}
+            <changefreq>{{ link.changefreq }}</changefreq>
+        {% endif -%}
+        {% if link.priority is defined -%}
+            <priority>{{ link.priority }}</priority>
+        {% endif -%}
+    </url>
+{%- endfor -%}
+</urlset>
