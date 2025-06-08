@@ -9,7 +9,7 @@ env:
     REGISTRY_IMAGE_NAME: ghcr.io/${{ github.repository }}
 
 jobs:
-    build-and-push-amd64:
+    build-and-push:
         runs-on: ubuntu-24.04
         permissions:
             contents: read
@@ -30,16 +30,6 @@ jobs:
                   username: ${{ github.repository_owner }}
                   password: ${{ secrets.GITHUB_TOKEN }}
 
-#            - name: Build and Push Docker Image
-#              run: |
-#                  docker pull ${{ env.REGISTRY_IMAGE_NAME }}:latest || true
-#                  docker build \
-#                    --cache-from "${{ env.REGISTRY_IMAGE_NAME }}:latest" \
-#                    --target ecs \
-#                    -f Dockerfile \
-#                    -t ${{ env.REGISTRY_IMAGE_NAME }}:latest .
-#                  docker push ${{ env.REGISTRY_IMAGE_NAME }}:latest
-
             - name: Build and push Docker image
               id: push
               uses: docker/build-push-action@v6.5.0
@@ -48,8 +38,6 @@ jobs:
                   push: true
                   target: ecs
                   tags: ${{ env.REGISTRY_IMAGE_NAME }}:latest
-                  cache-from: type=gha
-                  cache-to: type=gha,mode=max
 
             - name: Deploy the app
               uses: digitalocean/app_action/deploy@v2
