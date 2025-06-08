@@ -1,6 +1,55 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}The Breathing Nook | Contact{% endblock %}
-
 {% block body %}
+    <section class="bg-white relative overflow-hidden">
+        <img src="{{ asset('images/buda-nook-s.jpg') }}"
+             srcset="{{ asset('images/buda-nook-s.jpg') }} 600w, {{ asset('images/buda-nook-m.jpg') }} 1200w"
+             alt="Breathing Nook - Get in touch!" class="absolute inset-0 object-cover w-full h-full opacity-30">
+        <div class="py-8 px-4 mx-auto max-w-screen-xl lg:px-6 relative">
+            <div class="max-w-screen-md">
+                <h1 class="mb-4 text-4xl tracking-tight font-extrabold text-stone-900">Get in touch!</h1>
+                <p data-aos="fade-up" data-aos-delay="100" class="mb-8 font-light text-stone-500 sm:text-xl">
+                    If you’re interested in learning more about breathwork or yoga for health, the best way is to set up a <strong>free 15 minute consultation</strong> using the link below.
+                </p>
+                <div data-aos="fade-up" data-aos-delay="500" class="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4">
+                    <a href="#" class="inline-flex items-center justify-center px-4 py-2.5 text-base font-medium text-center text-white bg-primary-700 rounded-lg hover:bg-primary-800 focus:ring-4 focus:ring-primary-300">
+                        Free consultation
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="relative overflow-hidden">
+        <div class="mx-auto max-w-screen-xl flex flex-col lg:flex-row items-center justify-between px-4 sm:px-6 lg:px-8 py-6 lg:py-12">
+            <main class="mx-auto px-4 basis-100 lg:basis-2/3">
+                <div class="text-left text-stone-700">
+                    <h2 class="mb-6 text-center tracking-tight font-extrabold text-stone-700 text-4xl">
+                        Stay in touch
+                    </h2>
+                    <p class="mb-4 lg:mb-8 font-light text-gray-500">Sign up to receive monthly emails that share my schedule, my thoughts, access to free breathwork classes - and maybe the occasional picture of my dogs.</p>
+
+                    <form action="#" class="space-y-8">
+                        <div>
+                            <label for="email" class="block mb-2 text-sm font-medium text-stone-700">Your email</label>
+                            <input type="email" id="email" class="shadow-sm bg-stone-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5" placeholder="name@email.com" required>
+                        </div>
+                        <div>
+                            <label for="subject" class="block mb-2 text-sm font-medium text-stone-700">Subject</label>
+                            <input type="text" id="subject" class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500" placeholder="Let us know how we can help you" required>
+                        </div>
+                        <div class="sm:col-span-2">
+                            <label for="message" class="block mb-2 text-sm font-medium text-stone-700">Your message</label>
+                            <textarea id="message" rows="6" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500" placeholder="Leave a comment..."></textarea>
+                        </div>
+                        <button type="submit" class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300">Send message</button>
+                    </form>
+                </div>
+            </main>
+            <div class="pt-10 lg:pt-18 basis-100 lg:basis-1/3">
+                <img class="h-56 w-full object-cover object-top sm:h-72 md:h-96 lg:w-full lg:h-full rounded-md lg:rounded-xl"
+                     src="{{ asset('images/About_Ashley.jpg') }}" alt="">
+            </div>
+        </div>
+    </section>
 {% endblock %}

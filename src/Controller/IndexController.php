@@ -39,4 +39,13 @@ class IndexController extends AbstractController
             'seo' => $this->seo->contact(),
         ];
     }
+
+    #[Route('/services', name: 'services')]
+    #[Template('services.html.twig')]
+    public function services(): array
+    {
+        return [
+            'seo' => $this->seo->services(),
+        ];
+    }
 }
