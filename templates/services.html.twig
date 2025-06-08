@@ -1,4 +1,41 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+    <section class="bg-white relative overflow-hidden">
+        <img src="{{ asset('images/bali-yoga-s.jpg') }}"
+             srcset="{{ asset('images/bali-yoga-s.jpg') }} 600w, {{ asset('images/bali-yoga-m.jpg') }} 1200w"
+             alt="Breathing Nook - Book your pranayama class!" class="absolute inset-0 object-cover w-full h-full opacity-30">
+
+        <div class="pt-8 px-4 mx-auto max-w-screen-xl lg:px-6 relative">
+            <div class="max-w-screen-md">
+                <h1 class="mb-4 text-4xl tracking-tight font-extrabold text-stone-900">Book your pranayama class today!</h1>
+            </div>
+        </div>
+
+        <div class="px-4 mx-auto max-w-screen-xl text-center lg:px-6 mb-6">
+            <div class="mt-8 lg:mt-12 space-y-4 md:grid md:grid-cols-2 md:space-y-0 gap-4">
+                <div data-aos="fade-up" class="bg-stone-100/40 backdrop-blur-sm p-4 rounded-lg flex flex-col justify-between">
+                    <img src="{{ asset('images/mental-icon.png') }}" alt="Mental health icon" class="mx-auto mb-4 size-20 text-primary-600">
+
+                    <h3 class="mb-4 text-xl lg:text-2xl font-bold text-stone-700">Free Consultation</h3>
+                    <p class="mb-4 text-stone-500">Before booking your first session, please schedule a free 15 minute consultation.</p>
+                    <a href="{{ path('consultation', {type: 'free'}) }}" class="inline-flex items-center justify-center px-4 py-2.5 text-base font-medium text-center text-white bg-primary-700 rounded-lg hover:bg-primary-800 focus:ring-4 focus:ring-primary-300">
+                        Book Now
+                    </a>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="250" class="bg-stone-100/40 backdrop-blur-sm p-4 rounded-lg flex flex-col justify-between">
+                    <img src="{{ asset('images/physical-icon.png') }}" alt="Physicial health icon" class="mx-auto mb-4 size-20 text-primary-600">
+
+                    <h3 class="mb-4 text-xl lg:text-2xl font-bold text-stone-700">Private Session</h3>
+                    <p class="mb-4 text-stone-500">I offer one-hour private sessions virtually and at my Chicago based home studio.</p>
+                    <a href="{{ path('consultation', {type: 'private'}) }}" class="inline-flex items-center justify-center px-4 py-2.5 text-base font-medium text-center text-white bg-primary-700 rounded-lg hover:bg-primary-800 focus:ring-4 focus:ring-primary-300">
+                        Book Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white">
+    </section>
 {% endblock %}
