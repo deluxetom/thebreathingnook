@@ -1,5 +1,13 @@
 <?php
 
+/*
+ * Distribution and reproduction are prohibited.
+ *
+ * @package   thebreathingnook
+ * @copyright Deluxetom 2025
+ * @license   No License (Proprietary)
+ */
+
 namespace App\Controller;
 
 use App\Service\SEO;
