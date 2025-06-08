@@ -11,6 +11,9 @@ env:
 jobs:
     build-and-push-amd64:
         runs-on: ubuntu-24.04
+        permissions:
+            contents: read
+            packages: write
         strategy:
             fail-fast: false
             matrix:
@@ -45,6 +48,9 @@ jobs:
                 phpversion:
                     - '8.4'
         runs-on: ubuntu-24.04
+        permissions:
+            contents: read
+            packages: write
         steps:
             - name: Checkout
               uses: actions/checkout@v4

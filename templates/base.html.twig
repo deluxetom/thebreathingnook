@@ -2,7 +2,18 @@
 <html lang="en" class="overflow-x-hidden" data-theme="light">
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}TheBreathingNook!{% endblock %}</title>
+        <title>{{seo.title}}</title>
+        <meta name="description" content="{{seo.description}}"/>
+        <link rel="canonical" href="{{seo.canonical}}" />
+        <meta property="og:locale" content="{{seo.ogLocale}}" />
+        <meta property="og:type" content="{{seo.ogType}}" />
+        <meta property="og:title" content="{{seo.ogTitle}}" />
+        <meta property="og:description" content="{{seo.ogDescription}}" />
+        <meta property="og:url" content="{{seo.ogUrl}}" />
+        <meta property="og:site_name" content="{{seo.ogSiteName}}" />
+        <meta property="og:image:secure_url" content="{{seo.ogImageSecureUrl}}" />
+        <meta property="og:image:width" content="{{seo.ogImageWidth}}" />
+        <meta property="og:image:height" content="{{seo.ogImageHeight}}" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -41,16 +52,16 @@
                 <div class="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
                     <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
                         <li>
-                            <a href="#" class="block py-2 pr-4 pl-3 text-stone-800 rounded lg:p-0" aria-current="page">Home</a>
+                            <a href="{{ path('home') }}" class="block py-2 pr-4 pl-3 rounded lg:p-0 {% if app.request.attributes.get('_route') == 'home' %}text-stone-800{% else %}text-stone-500 hover:text-stone-800{% endif %}" aria-current="page">Home</a>
                         </li>
                         <li>
-                            <a href="#" class="block py-2 pr-4 pl-3 text-stone-500 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-stone-800 lg:p-0">About Ashley</a>
+                            <a href="{{ path('about') }}" class="block py-2 pr-4 pl-3 rounded lg:p-0 {% if app.request.attributes.get('_route') == 'about' %}text-stone-800{% else %}text-stone-500 hover:text-stone-800{% endif %}">About Ashley</a>
                         </li>
                         <li>
-                            <a href="#" class="block py-2 pr-4 pl-3 text-stone-500 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-stone-800 lg:p-0">Services</a>
+                            <a href="#" class="block py-2 pr-4 pl-3 rounded lg:p-0 {% if app.request.attributes.get('_route') == 'services' %}text-stone-800{% else %}text-stone-500 hover:text-stone-800{% endif %}">Services</a>
                         </li>
                         <li>
-                            <a href="#" class="block py-2 pr-4 pl-3 text-stone-500 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-stone-800 lg:p-0">Contact</a>
+                            <a href="#" class="block py-2 pr-4 pl-3 rounded lg:p-0 {% if app.request.attributes.get('_route') == 'contact' %}text-stone-800{% else %}text-stone-500 hover:text-stone-800{% endif %}">Contact</a>
                         </li>
                     </ul>
                 </div>
