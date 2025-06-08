@@ -30,12 +30,30 @@ jobs:
                   username: ${{ github.repository_owner }}
                   password: ${{ secrets.GITHUB_TOKEN }}
 
-            - name: Build and Push Docker Image
-              run: |
-                  docker pull ${{ env.REGISTRY_IMAGE_NAME }}:latest || true
-                  docker build \
-                    --cache-from "${{ env.REGISTRY_IMAGE_NAME }}:latest" \
-                    --target ecs \
-                    -f Dockerfile \
-                    -t ${{ env.REGISTRY_IMAGE_NAME }}:latest .
-                  docker push ${{ env.REGISTRY_IMAGE_NAME }}:latest
+#            - name: Build and Push Docker Image
+#              run: |
+#                  docker pull ${{ env.REGISTRY_IMAGE_NAME }}:latest || true
+#                  docker build \
+#                    --cache-from "${{ env.REGISTRY_IMAGE_NAME }}:latest" \
+#                    --target ecs \
+#                    -f Dockerfile \
+#                    -t ${{ env.REGISTRY_IMAGE_NAME }}:latest .
+#                  docker push ${{ env.REGISTRY_IMAGE_NAME }}:latest
+
+            - name: Build and push Docker image
+              id: push
+              uses: docker/build-push-action@v6.5.0
+              with:
+                  context: .
+                  push: true
+                  target: ecs
+                  tags: ${{ env.REGISTRY_IMAGE_NAME }}:latest
+                  cache-from: type=gha
+                  cache-to: type=gha,mode=max
+
+            - name: Deploy the app
+              uses: digitalocean/app_action/deploy@v2
+              env:
+                  SAMPLE_DIGEST: ${{ steps.push.outputs.digest }}
+              with:
+                  token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
