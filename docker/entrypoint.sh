@@ -26,4 +26,4 @@ echo "Local VM: ${LOCAL_VM}"
 echo "Debug: ${APP_DEBUG}"
 echo "Starting Application"
 
-/usr/bin/supervisord -n -c /etc/supervisord.conf
+/usr/bin/supervisord -n -c /supervisord.conf
