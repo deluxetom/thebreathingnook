@@ -2,3 +2,4 @@ symfonycasts_tailwind:
     # Specify the EXACT version of Tailwind CSS you want to use
     # https://github.com/tailwindlabs/tailwindcss/releases
     binary_version: 'v4.1.8'
+    #input_css: 'assets/styles/other.css'
