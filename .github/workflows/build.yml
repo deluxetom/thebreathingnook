@@ -32,6 +32,7 @@ jobs:
                   docker pull ${{ env.REGISTRY_IMAGE_NAME }}:${{ matrix.phpversion }}-amd64 || true
                   docker build \
                     --cache-from "${{ env.REGISTRY_IMAGE_NAME }}:${{ matrix.phpversion }}-amd64" \
+                    --target ecs \
                     -f Dockerfile \
                     -t ${{ env.REGISTRY_IMAGE_NAME }}:${{ matrix.phpversion }}-amd64 .
                   docker push ${{ env.REGISTRY_IMAGE_NAME }}:${{ matrix.phpversion }}-amd64
