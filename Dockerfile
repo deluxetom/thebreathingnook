@@ -15,7 +15,7 @@ RUN CGO_ENABLED=0 GOOS=$TARGETOS GOARCH=$TARGETARCH xcaddy build
 # -----------------------------------------------------
 # Base image
 # -----------------------------------------------------
-FROM php:$PHP_VERSION-fpm as base
+FROM php:$PHP_VERSION-fpm AS base
 
 ARG PORT=9001
 ARG PUBLIC_DIR=public
