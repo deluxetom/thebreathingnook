@@ -32,12 +32,10 @@ class SEO
         $this->description = 'Based in Chicago, The Breathing Nook is a Pranayama yoga studio focused on health and healing, offering private and small group breath work classes by a certified yoga and pranayama instructor. Virtual appointments available.';
     }
 
-
     public function home(): self
     {
         $this->title = 'The Breathing Nook | Home';
-        $this->description = 'Based in Chicago, The Breathing Nook is a Pranayama yoga studio focused on health and healing, offering private and small group breath work classes by a certified yoga and pranayama instructor. Virtual appointments available.';
-        $this->canonical = 'https://www.thebreathingnook.com';
+        $this->canonical = 'https://www.thebreathingnook.com/';
 
         $this->ogTitle = $this->title;
         $this->ogDescription = $this->description;
@@ -46,12 +44,34 @@ class SEO
         return $this;
     }
 
-
     public function about(): self
     {
         $this->title = 'The Breathing Nook | About Ashley';
-        $this->description = 'Based in Chicago, The Breathing Nook is a Pranayama yoga studio focused on health and healing, offering private and small group breath work classes by a certified yoga and pranayama instructor. Virtual appointments available.';
-        $this->canonical = 'https://www.thebreathingnoko.com';
+        $this->canonical = 'https://www.thebreathingnook.com/about-ashley';
+
+        $this->ogTitle = $this->title;
+        $this->ogDescription = $this->description;
+        $this->ogUrl = $this->canonical;
+
+        return $this;
+    }
+
+    public function contact(): self
+    {
+        $this->title = 'The Breathing Nook | Contact';
+        $this->canonical = 'https://www.thebreathingnook.com/contact';
+
+        $this->ogTitle = $this->title;
+        $this->ogDescription = $this->description;
+        $this->ogUrl = $this->canonical;
+
+        return $this;
+    }
+
+    public function services(): self
+    {
+        $this->title = 'The Breathing Nook | Services';
+        $this->canonical = 'https://www.thebreathingnook.com/services';
 
         $this->ogTitle = $this->title;
         $this->ogDescription = $this->description;
