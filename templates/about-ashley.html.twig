@@ -1,9 +1,37 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}About Ashley{% endblock %}
+{% block title %}The Breathing Nook | About Ashley{% endblock %}
 
 {% block body %}
+    <section id="about" class="relative overflow-hidden">
+        <div class="mx-auto max-w-screen-xl flex flex-col lg:flex-row items-center justify-between px-4 sm:px-6 lg:px-8 py-6 lg:py-12">
+            <main class="mx-auto px-4 basis-100 lg:basis-2/3">
+                <div class="text-left text-stone-700">
+                    <h2 class="my-6 text-center text-2xl tracking-tight font-extrabold text-gray-900 sm:text-3xl md:text-4xl text-stone-900">
+                        About me
+                    </h2>
 
-<h1>About Ashley</h1>
+                    <p class="mb-2">
+                        My first experience with breath work was on a wellness retreat - I had been dealing with chronic pain for almost two years and decided to try something new.  At the end of my first pranayama class, I noticed that the pain had subsided. I initially thought was a coincidence, but over the course of the next few days and the next few classes, the pain just kept subsiding.
+                    </p>
+
+                    <p class="mb-2">
+                        After returning home, I read everything I could about breath work and discovered Pranayama. I quickly became a daily student and was transformed by the practice. I loved how healing and accessible the breathing was, and the relief it brought me.
+                    </p>
+
+                    <p class="mb-2">
+                        Initially, I wanted to get certified so that I could elevate my own practice, but my teacher was so inspiring that it quickly grew into something bigger. As I offered practice sessions to friends and family, I felt so much gratitude from them and their experience, that I decided to dedicate more of my time to teaching and introducing others to Pranayama.
+                    </p>
+
+                    <p>
+                        The classes I offer are meant to provide people a safe space to experience healing, reconnect, feel grounded and find a release. The brightest light is within; my goal is to help you find it.
+                    </p>
+                </div>
+            </main>
+            <div class="pt-12 lg:pt-24 basis-100 lg:basis-1/3">
+                <img class="h-56 w-full object-cover object-top sm:h-72 md:h-96 lg:w-full lg:h-full lg:rounded-xl" src="{{ asset('images/About_Ashley.jpg') }}" alt="">
+            </div>
+        </div>
+    </section>
 
 {%  endblock %}

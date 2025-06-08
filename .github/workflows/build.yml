@@ -66,6 +66,5 @@ jobs:
                 run: |
                     docker manifest create \
                       ${{ env.REGISTRY_IMAGE_NAME }}:${{ matrix.phpversion }} \
-                      --amend ${{ env.REGISTRY_IMAGE_NAME }}:${{ matrix.phpversion }}-amd64 \
-                      --amend ${{ env.REGISTRY_IMAGE_NAME }}:${{ matrix.phpversion }}-arm64
+                      --amend ${{ env.REGISTRY_IMAGE_NAME }}:${{ matrix.phpversion }}-amd64
                     docker manifest push ${{ env.REGISTRY_IMAGE_NAME }}:${{ matrix.phpversion }}
