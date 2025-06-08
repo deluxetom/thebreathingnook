@@ -5,7 +5,12 @@
 {% block body %}
     <section class="mb-12 md:mb-4">
         <div class="gap-8 items-center py-6 px-4 mx-auto max-w-screen-xl xl:gap-12 md:grid md:grid-cols-2 sm:py-12 lg:px-6">
-            <img class="w-full" src="{{ asset('images/Mexico_Ashley_0107.jpg') }}" alt="dashboard image">
+            <img class="w-full rounded-md lg:rounded-xl" src="{{ asset('images/Mexico_Ashley_0107-s.jpg') }}"
+                    srcset="{{ asset('images/Mexico_Ashley_0107-s.jpg') }} 800w,
+                        {{ asset('images/Mexico_Ashley_0107-m.jpg') }} 1200w,
+                        {{ asset('images/Mexico_Ashley_0107-lg.jpg') }} 2500w"
+                    sizes="(max-width: 768px) 90vw, (max-width: 1280px) 45vw, 600px"
+                 alt="Breathwork classes">
             <div class="mt-4 md:mt-0">
                 <h1 class="mb-4 text-4xl tracking-tight font-extrabold text-stone-900">
                     Breathwork classes focused on health and healing</h1>

@@ -31,12 +31,13 @@
             {% block importmap %}{{ importmap('app') }}{% endblock %}
         {% endblock %}
     </head>
-    <body class="bg-stone-50">
-    <header>
+    <body class="bg-stone-50 pt-16">
+    <header class="fixed top-0 w-full z-50 shadow-md">
         <nav class="border-gray-200 px-3 lg:px-4 py-2.5 bg-stone-100">
             <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
                 <a href="/" class="flex items-center">
-                    <img src="{{ asset('images/the-breathing-nook_black.png') }}" class="mr-3 h-6 sm:h-9" alt="The Breathing Nook" />
+                    <img src="{{ asset('images/the-breathing-nook_black.png') }}" class="mr-3 h-6 sm:h-9"
+                         alt="The Breathing Nook" />
                     <span class="self-center text-sm md:text-xl font-semibold whitespace-nowrap text-stone-900">
                         The Breathing Nook
                     </span>

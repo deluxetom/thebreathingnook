@@ -64,12 +64,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends ${BUILD_DEPS} \
 # Install PHP extensions
 RUN set -eux; install-php-extensions $EXTENSIONS
 
-# Install nodeJS
-RUN curl -fsSL https://deb.nodesource.com/setup_23.x | bash - \
-    && apt-get install -y nodejs && \
-    node --version && \
-    npm --version
-
 # Update ulimit
 RUN ulimit -n 16384
 
