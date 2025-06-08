@@ -43,5 +43,8 @@ jobs:
               uses: digitalocean/app_action/deploy@v2
               env:
                   SAMPLE_DIGEST: ${{ steps.push.outputs.digest }}
+                  GHCR_CREDENTIALS: ${{ secrets.DIGITALOCEAN_GHCR_CREDENTIALS }}
               with:
+                  project_id: the-breathing-nook
+                  app_name: thebreathingnook
                   token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
