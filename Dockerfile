@@ -135,4 +135,4 @@ RUN if [ "$APP_ENV" != "prod" ]; then \
     chmod +x bin/console; sync; fi
 
 # Assets
-RUN ./bin/console tailwind:build --minify -v
+RUN ./bin/console tailwind:build --minify -v && ./bin/console asset-map:compile
