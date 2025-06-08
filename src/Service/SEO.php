@@ -25,7 +25,7 @@ class SEO
         $this->ogLocale = 'en_US';
         $this->ogType = 'website';
         $this->ogSiteName = 'The Breathing Nook';
-        $this->ogImageSecureUrl = '/seo.png';
+        $this->ogImageSecureUrl = '/seo.jpg';
         $this->ogImageWidth = '1620';
         $this->ogImageHeight = '1080';
 
