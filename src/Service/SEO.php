@@ -68,6 +68,18 @@ class SEO
         return $this;
     }
 
+    public function consultation(): self
+    {
+        $this->title = 'The Breathing Nook | Book your free consultation';
+        $this->canonical = 'https://www.thebreathingnook.com/consultation';
+
+        $this->ogTitle = $this->title;
+        $this->ogDescription = $this->description;
+        $this->ogUrl = $this->canonical;
+
+        return $this;
+    }
+
     public function services(): self
     {
         $this->title = 'The Breathing Nook | Services';
