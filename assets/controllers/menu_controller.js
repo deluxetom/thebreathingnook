@@ -19,12 +19,10 @@ export default class extends Controller {
 
     close() {
         this.leave();
-        document.body.style.overflowY = 'visible';
     }
 
     open() {
         this.enter();
-        document.body.style.overflowY = 'hidden';
     }
 
     toggle() {
