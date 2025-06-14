@@ -26,7 +26,7 @@
     --color-body-900: #483b3d;
     --color-body-950: #282022;
 
-    /* mulberry */
+    /* mulberry https://uicolors.app/generate/bf4a7d */
     --color-primary-50: #fbf4f8;
     --color-primary-100: #f9eaf3;
     --color-primary-200: #f4d6e7;
@@ -41,7 +41,7 @@
 
 
 
-    /* hopbush */
+    /* lilac https://uicolors.app/generate/e7badf */
     /*--color-primary-50: #faf5f9;*/
     /*--color-primary-100: #f7ecf5;*/
     /*--color-primary-200: #f1d9ee;*/
@@ -53,8 +53,6 @@
     /*--color-primary-800: #7e3668;*/
     /*--color-primary-900: #6b3059;*/
     /*--color-primary-950: #3f1832;*/
-
-
 
     /*--color-primary-50: #f6f7ee;*/
     /*--color-primary-100: #ecedda;*/
@@ -148,6 +146,10 @@
     }
     .menu-item {
         @apply text-3xl lg:text-base font-bold justify-start relative
+    }
+
+    .footer-logo {
+        @apply flex justify-center lg:justify-start items-center mb-4 text-2xl font-semibold text-body-100 lg:mb-0
     }
 }
 

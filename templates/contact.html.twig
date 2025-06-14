@@ -1,17 +1,17 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <section class="bg-white relative overflow-hidden">
+    <section class="relative overflow-hidden bg-body-900 shapedividers_com-3049">
         <img src="{{ asset('images/buda-nook-s.jpg') }}"
              srcset="{{ asset('images/buda-nook-s.jpg') }} 600w, {{ asset('images/buda-nook-m.jpg') }} 1200w"
-             alt="Breathing Nook - Get in touch!" class="absolute inset-0 object-cover w-full h-full opacity-30">
+             alt="Breathing Nook - Get in touch!" class="absolute inset-0 object-cover w-full h-full opacity-60">
         <div class="py-8 px-4 mx-auto max-w-screen-xl lg:px-6 relative">
-            <div class="max-w-screen-md">
-                <h1 class="mb-4 text-4xl tracking-tight font-extrabold text-stone-900">Get in touch!</h1>
-                <p data-aos="fade-up" data-aos-delay="100" class="mb-8 font-light text-stone-500 sm:text-xl">
+            <div class="max-w-screen-md pt-40 relative">
+                <h1 class="mb-4 text-4xl tracking-tight font-extrabold text-body-50">Get in touch!</h1>
+                <p data-aos="fade-in" data-aos-delay="100" class="mb-8 font-light text-body-100 sm:text-xl">
                     If you’re interested in learning more about breathwork or yoga for health, the best way is to set up a <strong>free 15 minute consultation</strong> using the link below.
                 </p>
-                <div data-aos="fade-up" data-aos-delay="500" class="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4">
+                <div data-aos="fade-in" data-aos-delay="500" class="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4 mb-8">
                     <a href="{{ path('consultation', {type: 'free'}) }}" class="inline-flex items-center justify-center px-4 py-2.5 text-base font-medium text-center text-white bg-primary-700 rounded-lg hover:bg-primary-800 focus:ring-4 focus:ring-primary-300">
                         Free consultation
                     </a>
