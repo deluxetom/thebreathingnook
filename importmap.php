@@ -50,4 +50,7 @@ return [
     'tailwindcss/colors' => [
         'version' => '4.0.4',
     ],
+    'stimulus-use' => [
+        'version' => '0.52.3',
+    ],
 ];
