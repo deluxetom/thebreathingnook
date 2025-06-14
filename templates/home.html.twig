@@ -1,19 +1,16 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <section class="mb-12 md:mb-4">
-        <div class="gap-8 items-center py-6 px-4 mx-auto max-w-screen-xl xl:gap-12 md:grid md:grid-cols-2 sm:py-12 lg:px-6">
-            <img class="w-full rounded-md lg:rounded-xl" src="{{ asset('images/Mexico_Ashley_0107-s.jpg') }}"
-                    srcset="{{ asset('images/Mexico_Ashley_0107-s.jpg') }} 800w,
-                        {{ asset('images/Mexico_Ashley_0107-m.jpg') }} 1200w,
-                        {{ asset('images/Mexico_Ashley_0107-lg.jpg') }} 2500w"
-                    sizes="(max-width: 768px) 90vw, (max-width: 1280px) 45vw, 600px"
-                 alt="Breathwork classes">
-            <div class="mt-4 md:mt-0">
-                <h1 class="mb-4 text-4xl tracking-tight font-extrabold text-stone-900">
+    <section class="relative overflow-hidden">
+        <img src="{{ asset('images/breathing-nook-sunset2-s.jpg') }}"
+             srcset="{{ asset('images/breathing-nook-sunset2-s.jpg') }} 600w, {{ asset('images/breathing-nook-sunset2-m.jpg') }} 1200w, {{ asset('images/breathing-nook-sunset2-lg.jpg') }} 2400w"
+             alt="Breathing Nook - Get in touch!" class="absolute inset-0 object-cover w-full h-full ">
+        <div class="py-8 px-4 mx-auto max-w-screen-xl lg:px-6 relative">
+            <div class="max-w-screen-md min-h-96 pt-32 md:pr-12">
+                <h1 class="mb-8 md:mb-6 text-4xl leading-12 font-bold text-white">
                     Breathwork classes focused on health and healing</h1>
-                <p class="mb-6 font-light text-stone-700 md:text-lg">Pranayama is the ancient practice of breath control, designed to calm the mind, energize the body, and support deep healing.</p>
-                <a href="{{ path('services') }}" data-aos="fade-right" class="inline-flex items-center text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
+                <p class="mb-6 font-light text-white/80 md:text-lg hidden">Pranayama is the ancient practice of breath control, designed to calm the mind, energize the body, and support deep healing.</p>
+                <a href="{{ path('services') }}" data-aos="fade-in" data-aos-delay="300" class="button2">
                     Schedule a session
                     <svg class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
                 </a>
@@ -21,14 +18,35 @@
         </div>
     </section>
 
-{#    <section class="relative bg-stone-200">#}
+
+{#    <section class="mb-12 md:mb-4 hidden">#}
+{#        <div class="gap-8 items-center py-6 px-4 mx-auto max-w-screen-xl xl:gap-12 md:grid md:grid-cols-2 sm:py-12 lg:px-6">#}
+{#            <img class="w-full rounded-md lg:rounded-xl" src="{{ asset('images/Mexico_Ashley_0107-s.jpg') }}"#}
+{#                    srcset="{{ asset('images/Mexico_Ashley_0107-s.jpg') }} 800w,#}
+{#                        {{ asset('images/Mexico_Ashley_0107-m.jpg') }} 1200w,#}
+{#                        {{ asset('images/Mexico_Ashley_0107-lg.jpg') }} 2500w"#}
+{#                    sizes="(max-width: 768px) 90vw, (max-width: 1280px) 45vw, 600px"#}
+{#                 alt="Breathwork classes">#}
+{#            <div class="mt-4 md:mt-0">#}
+{#                <h1 class="text-4xl tracking-tight font-extrabold text-body-900">#}
+{#                    Breathwork classes focused on health and healing</h1>#}
+{#                <p class="mb-6 font-light text-body-700 md:text-lg">Pranayama is the ancient practice of breath control, designed to calm the mind, energize the body, and support deep healing.</p>#}
+{#                <a href="{{ path('services') }}" data-aos="fade-right" class="inline-flex items-center text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">#}
+{#                    Schedule a session#}
+{#                    <svg class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>#}
+{#                </a>#}
+{#            </div>#}
+{#        </div>#}
+{#    </section>#}
+
+{#    <section class="relative bg-body-200">#}
 {#        <img src="{{ asset('images/studio-bg.jpg') }}" alt="Studio background" class="absolute inset-0 object-cover w-full h-full opacity-30 bg-blend-multiply">#}
-{#        <div class="relative py-8 px-4 mx-auto max-w-screen-xl text-stone-800 lg:py-16 z-1">#}
+{#        <div class="relative py-8 px-4 mx-auto max-w-screen-xl text-body-800 lg:py-16 z-1">#}
 {#            <div class="mb-6 max-w-screen-lg lg:mb-0">#}
 {#                <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl lg:text-6xl">#}
 {#                    Breathwork classes focused on health and healing#}
 {#                </h1>#}
-{#                <p class="mb-6 font-light text-stone-700 lg:mb-8 md:text-lg lg:text-xl">#}
+{#                <p class="mb-6 font-light text-body-700 lg:mb-8 md:text-lg lg:text-xl">#}
 {#                   Pranayama is the ancient practice of breath control, designed to calm the mind, energize the body, and support deep healing.#}
 {#                </p>#}
 {#                <a href="#" class="inline-flex items-center py-3 px-5 font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-900 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">#}
@@ -39,34 +57,35 @@
 {#        </div>#}
 {#    </section>#}
 
-    <section class="bg-white">
+
+    <section class="bg-body-100">
         <div class="py-8 px-4 mx-auto max-w-screen-xl text-center sm:py-16 lg:px-6">
-            <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-stone-900">The benefits of breathwork</h2>
+            <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-accent-500">The benefits of breathwork</h2>
             <div class="mt-8 lg:mt-12 space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
                 <div data-aos="fade-up">
-                    <img src="{{ asset('images/mental-icon.png') }}" alt="Mental health icon" class="mx-auto mb-4 size-20 text-primary-600">
+                    <img src="{{ asset('images/mental-icon.png') }}" alt="Mental health icon" class="mx-auto mb-4 size-20 text-primary-600" loading="lazy">
 
-                    <h3 class="mb-4 text-xl lg:text-2xl font-bold text-stone-700">Mental</h3>
-                    <p class="mb-4 text-stone-500">Studies have shown that a consistent pranayama (sanskrit) practice activates the parasympathetic nervous system by reducing stress, depression and anxiety.</p>
-                    <p class="mb-4 text-stone-500">By improving self-regulation, it allows for more balance - and puts people back in the driver's seat of their consciousness.</p>
+                    <h3 class="mb-4 text-xl lg:text-2xl font-bold text-body-700">Mental</h3>
+                    <p class="mb-4 text-body-500">Studies have shown that a consistent pranayama (sanskrit) practice activates the parasympathetic nervous system by reducing stress, depression and anxiety.</p>
+                    <p class="mb-4 text-body-500">By improving self-regulation, it allows for more balance - and puts people back in the driver's seat of their consciousness.</p>
                     <a href="#" class="inline-flex items-center text-sm font-medium text-primary-600 hover:text-primary-700">
                         Learn more <svg class="ml-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
                     </a>
                 </div>
-                <div data-aos="fade-up" data-aos-delay="250">
-                    <img src="{{ asset('images/physical-icon.png') }}" alt="Physicial health icon" class="mx-auto mb-4 size-20 text-primary-600">
+                <div data-aos="fade-up" data-aos-delay="150">
+                    <img src="{{ asset('images/physical-icon.png') }}" alt="Physicial health icon" class="mx-auto mb-4 size-20 text-primary-600" loading="lazy">
 
-                    <h3 class="mb-4 text-xl lg:text-2xl font-bold text-stone-700">Physical</h3>
-                    <p class="mb-4 text-stone-500">Practicing regularly can improve lung function, reduce blood pressure, and can even help improve cardiorespiratory conditions like asthma and COPD. It also improves your sleep, which as everyone knows, is a gift that keeps on giving.</p>
+                    <h3 class="mb-4 text-xl lg:text-2xl font-bold text-body-700">Physical</h3>
+                    <p class="mb-4 text-body-500">Practicing regularly can improve lung function, reduce blood pressure, and can even help improve cardiorespiratory conditions like asthma and COPD. It also improves your sleep, which as everyone knows, is a gift that keeps on giving.</p>
                     <a href="#" class="inline-flex items-center text-sm font-medium text-primary-600 hover:text-primary-700">
                         Learn more <svg class="ml-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
                     </a>
                 </div>
-                <div data-aos="fade-up" data-aos-delay="500">
-                    <img src="{{ asset('images/spiritual-icon.png') }}" alt="Spiritual health icon" class="mx-auto mb-4 size-20 text-primary-600">
+                <div data-aos="fade-up" data-aos-delay="300">
+                    <img src="{{ asset('images/spiritual-icon.png') }}" alt="Spiritual health icon" class="mx-auto mb-4 size-20 text-primary-600" loading="lazy">
 
-                    <h3 class="mb-4 text-xl lg:text-2xl font-bold text-stone-700">Spiritual</h3>
-                    <p class="mb-4 text-stone-500">A regular pranayama practice increases mindfulness and can help those seeking inner peace, clarity, and calm. For those at a different stage of their journey, breath work will help you tap into divine consciousness.</p>
+                    <h3 class="mb-4 text-xl lg:text-2xl font-bold text-body-700">Spiritual</h3>
+                    <p class="mb-4 text-body-500">A regular pranayama practice increases mindfulness and can help those seeking inner peace, clarity, and calm. For those at a different stage of their journey, breath work will help you tap into divine consciousness.</p>
                     <a href="#" class="inline-flex items-center text-sm font-medium text-primary-600 hover:text-primary-700">
                         Learn more <svg class="ml-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
                     </a>
@@ -75,17 +94,17 @@
         </div>
     </section>
 
-    <section class="bg-stone-100">
+    <section class="bg-body-50">
         <div class="py-6 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-6">
             <div class="mx-auto max-w-screen-sm mb-8 lg:mb-16">
                 <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900">Client Appreciation.</h2>
             </div>
             <div id="testimonial-carousel" class="relative" data-carousel="slide">
                 <div class="overflow-x-hidden overflow-y-visible relative mx-auto max-w-screen-md h-80 rounded-lg">
-                    <figure class="hidden mx-auto w-full max-w-screen-md" data-carousel-item>
+                    <figure class="hidden mx-auto w-full max-w-screen-md !z-0" data-carousel-item>
                         <blockquote>
-                            <p class="text-lg font-medium text-stone-700 sm:text-2xl mb-3">Thoughtful, kind and attentive</p>
-                            <p class="lg:text-lg text-stone-500">I recently attended Ashley's breath work class, and it was a fantastic experience. As a first-timer, I was a bit nervous, but she made everything feel comfortable and accessible. She was thoughtful, kind and attentive. By the end of the session, I felt incredible - very relaxed and calm - almost tingly! I highly recommend it for anyone looking to try breathwork!</p>
+                            <p class="text-lg font-medium text-body-700 sm:text-2xl mb-3">Thoughtful, kind and attentive</p>
+                            <p class="lg:text-lg text-body-500">I recently attended Ashley's breath work class, and it was a fantastic experience. As a first-timer, I was a bit nervous, but she made everything feel comfortable and accessible. She was thoughtful, kind and attentive. By the end of the session, I felt incredible - very relaxed and calm - almost tingly! I highly recommend it for anyone looking to try breathwork!</p>
                         </blockquote>
                         <figcaption class="flex justify-center items-center mt-6 space-x-3">
 {#                            <img class="w-6 h-6 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png" alt="profile picture">#}
@@ -95,10 +114,10 @@
                             </div>
                         </figcaption>
                     </figure>
-                    <figure class="hidden mx-auto w-full max-w-screen-md" data-carousel-item>
+                    <figure class="hidden mx-auto w-full max-w-screen-md !z-0" data-carousel-item>
                         <blockquote>
-                            <p class="text-lg font-medium text-stone-700 sm:text-2xl mb-3">Safe and calm</p>
-                            <p class="lg:text-lg text-stone-500">My friends and I signed up for pranayama classes with Ashley. We had limited experience, mostly through yoga, but were curious to try it. We have done 2 sessions so far and each one was unique. Both sessions, we all felt very safe and calm and once the meditation was done, we didn't feel rushed and all had an opportunity to share. I highly recommend these sessions to anyone who is considering breathwork.</p>
+                            <p class="text-lg font-medium text-body-700 sm:text-2xl mb-3">Safe and calm</p>
+                            <p class="lg:text-lg text-body-500">My friends and I signed up for pranayama classes with Ashley. We had limited experience, mostly through yoga, but were curious to try it. We have done 2 sessions so far and each one was unique. Both sessions, we all felt very safe and calm and once the meditation was done, we didn't feel rushed and all had an opportunity to share. I highly recommend these sessions to anyone who is considering breathwork.</p>
                         </blockquote>
                         <figcaption class="flex justify-center items-center mt-6 space-x-3">
 {#                            <img class="w-6 h-6 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/helene-engels.png" alt="profile picture">#}
@@ -108,10 +127,10 @@
                             </div>
                         </figcaption>
                     </figure>
-                    <figure class="hidden mx-auto w-full max-w-screen-md" data-carousel-item>
+                    <figure class="hidden mx-auto w-full max-w-screen-md !z-0" data-carousel-item>
                         <blockquote>
-                            <p class="text-lg font-medium text-stone-700 sm:text-2xl mb-3">A journey inside your soul.</p>
-                            <p class="lg:text-lg text-stone-500">Ashley will guide you to discover the power of your own breath. I had a 1 hour zoom session, but it felt like 15 minutes. I wanted it to last longer. It was so relaxing, healing, it is basically a journey inside your soul. There is something about Ashley's voice that guides you to unknown peaceful place. Can't wait for my second session along with my Son. A big thank you!</p>
+                            <p class="text-lg font-medium text-body-700 sm:text-2xl mb-3">A journey inside your soul.</p>
+                            <p class="lg:text-lg text-body-500">Ashley will guide you to discover the power of your own breath. I had a 1 hour zoom session, but it felt like 15 minutes. I wanted it to last longer. It was so relaxing, healing, it is basically a journey inside your soul. There is something about Ashley's voice that guides you to unknown peaceful place. Can't wait for my second session along with my Son. A big thank you!</p>
                         </blockquote>
                         <figcaption class="flex justify-center items-center mt-6 space-x-3">
                             <div class="flex items-center divide-x-2 divide-gray-500">
@@ -123,13 +142,13 @@
                 </div>
                 <div class="flex justify-center items-center">
                     <button type="button" class="flex justify-center items-center mr-4 h-full cursor-pointer group focus:outline-none" data-carousel-prev>
-                    <span class="text-stone-500 hover:text-stone-700">
+                    <span class="text-body-500 hover:text-body-700">
                         <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l2.293 2.293a1 1 0 010 1.414z" clip-rule="evenodd"></path></svg>
                         <span class="hidden">Previous</span>
                     </span>
                     </button>
                     <button type="button" class="flex justify-center items-center h-full cursor-pointer group focus:outline-none" data-carousel-next>
-                    <span class="text-stone-500 hover:text-stone-700">
+                    <span class="text-body-500 hover:text-body-700">
                         <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
                         <span class="hidden">Next</span>
                     </span>
@@ -140,68 +159,71 @@
     </section>
 
 
-    <section class="">
+    <section class="bg-body-100">
         <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6 ">
-            <h2 class="mb-6 lg:mb-8 text-3xl lg:text-4xl tracking-tight font-extrabold text-center text-stone-800">Frequently asked questions</h2>
+            <h2 class="mb-6 lg:mb-8 text-3xl lg:text-4xl tracking-tight font-extrabold text-center text-body-800">Frequently asked questions</h2>
             <div class="mx-auto max-w-screen-md">
-                <div id="accordion-flush" data-accordion="collapse" data-active-classes="text-stone-700" data-inactive-classes="text-stone-500">
+                <div id="accordion-flush" data-accordion="collapse" data-active-classes="text-body-700" data-inactive-classes="text-body-500">
                     <h2 id="accordion-flush-heading-1">
-                        <button type="button" class="flex justify-between items-center py-5 w-full font-medium text-left text-stone-700 border-b border-stone-200" data-accordion-target="#accordion-flush-body-1" aria-expanded="true" aria-controls="accordion-flush-body-1">
+                        <button type="button" class="flex justify-between items-center py-5 w-full font-medium text-left text-body-700 border-b border-body-200" data-accordion-target="#accordion-flush-body-1" aria-expanded="true" aria-controls="accordion-flush-body-1">
                             <span>Are Pranayama and breathwork different?</span>
                             <svg data-accordion-icon="" class="w-6 h-6 rotate-180 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
                         </button>
                     </h2>
                     <div id="accordion-flush-body-1" class="" aria-labelledby="accordion-flush-heading-1">
-                        <div class="py-5 border-b border-stone-200">
-                            <p class="mb-2 text-stone-400">hey are exactly the same thing, the word Pranayama is Sanskrit and refers to an ancient yogic practice. Prana = life force and ayama = expanding the dimension or yama = restraint or control. In simple terms, the aim of Pranayama is control over the Prana, or breath. Over time, the western world started to use the term “breathwork” and that is what most modern yoga studios and teachers use when referring to the practice of breath control.</p>
+                        <div class="py-5 border-b border-body-200">
+                            <p class="mb-2 text-body-500">They are exactly the same thing, the word Pranayama is Sanskrit and refers to an ancient yogic practice. Prana = life force and ayama = expanding the dimension or yama = restraint or control. In simple terms, the aim of Pranayama is control over the Prana, or breath. Over time, the western world started to use the term “breathwork” and that is what most modern yoga studios and teachers use when referring to the practice of breath control.</p>
                         </div>
                     </div>
                     <h2 id="accordion-flush-heading-2">
-                        <button type="button" class="flex justify-between items-center py-5 w-full font-medium text-left text-stone-700 border-b border-stone-200" data-accordion-target="#accordion-flush-body-2" aria-expanded="false" aria-controls="accordion-flush-body-2">
+                        <button type="button" class="flex justify-between items-center py-5 w-full font-medium text-left text-body-700 border-b border-body-200" data-accordion-target="#accordion-flush-body-2" aria-expanded="false" aria-controls="accordion-flush-body-2">
                             <span>I’m pregnant, can I still practice pranayama?</span>
                             <svg data-accordion-icon="" class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
                         </button>
                     </h2>
                     <div id="accordion-flush-body-2" class="hidden" aria-labelledby="accordion-flush-heading-2">
-                        <div class="py-5 border-b border-stone-200">
-                            <p class="mb-2 text-stone-400">Of course, but certain techniques should be avoided. Please advise your teacher so they know to make modifications for you - and never practice breath holds while pregnant.</p>
+                        <div class="py-5 border-b border-body-200">
+                            <p class="mb-2 text-body-400">Of course, but certain techniques should be avoided. Please advise your teacher so they know to make modifications for you - and never practice breath holds while pregnant.</p>
                         </div>
                     </div>
                     <h2 id="accordion-flush-heading-3">
-                        <button type="button" class="flex justify-between items-center py-5 w-full font-medium text-left text-stone-700 bg-white border-b border-stone-200" data-accordion-target="#accordion-flush-body-3" aria-expanded="false" aria-controls="accordion-flush-body-3">
+                        <button type="button" class="flex justify-between items-center py-5 w-full font-medium text-left text-body-700 border-b border-body-200" data-accordion-target="#accordion-flush-body-3" aria-expanded="false" aria-controls="accordion-flush-body-3">
                             <span>I have a health condition, will I still be able to practice? </span>
                             <svg data-accordion-icon="" class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
                         </button>
                     </h2>
                     <div id="accordion-flush-body-3" class="hidden" aria-labelledby="accordion-flush-heading-3">
-                        <div class="py-5 border-b border-stone-200 dark:border-gray-700">
-                            <p class="mb-2 text-stone-400">Anyone can practice pranayama. Whether you’re recovering from a surgery, undergoing chemotherapy, have COPD, or another health condition, not only can you practice, but breathwork will be beneficial to your healing journey.</p>
+                        <div class="py-5 border-b border-body-200">
+                            <p class="mb-2 text-body-400">Anyone can practice pranayama. Whether you’re recovering from a surgery, undergoing chemotherapy, have COPD, or another health condition, not only can you practice, but breathwork will be beneficial to your healing journey.</p>
                         </div>
                     </div>
                     <h2 id="accordion-flush-heading-4">
-                        <button type="button" class="flex justify-between items-center py-5 w-full font-medium text-left text-stone-700 bg-white border-b border-stone-200" data-accordion-target="#accordion-flush-body-4" aria-expanded="false" aria-controls="accordion-flush-body-4">
+                        <button type="button" class="flex justify-between items-center py-5 w-full font-medium text-left text-body-700  border-b border-body-200" data-accordion-target="#accordion-flush-body-4" aria-expanded="false" aria-controls="accordion-flush-body-4">
                             <span>How long will it take to see results from the sessions?</span>
                             <svg data-accordion-icon="" class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
                         </button>
                     </h2>
                     <div id="accordion-flush-body-4" class="hidden" aria-labelledby="accordion-flush-heading-4">
-                        <div class="py-5 border-b border-stone-200">
-                            <p class="mb-2 text-stone-400">Most people feel some kind of benefit, whether that be an emotional or physical release. As you develop a more consistent practice, the benefits will continue to increase.</p>
+                        <div class="py-5 border-b border-body-200">
+                            <p class="mb-2 text-body-400">Most people feel some kind of benefit, whether that be an emotional or physical release. As you develop a more consistent practice, the benefits will continue to increase.</p>
                         </div>
                     </div>
                     <h2 id="accordion-flush-heading-5">
-                        <button type="button" class="flex justify-between items-center py-5 w-full font-medium text-left text-stone-700 bg-white border-b border-stone-200" data-accordion-target="#accordion-flush-body-5" aria-expanded="false" aria-controls="accordion-flush-body-5">
+                        <button type="button" class="flex justify-between items-center py-5 w-full font-medium text-left text-body-700 border-b border-body-200" data-accordion-target="#accordion-flush-body-5" aria-expanded="false" aria-controls="accordion-flush-body-5">
                             <span>Do I need to practice yoga asana (postures) in order to benefit from Pranayama?</span>
                             <svg data-accordion-icon="" class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
                         </button>
                     </h2>
                     <div id="accordion-flush-body-5" class="hidden" aria-labelledby="accordion-flush-heading-4">
-                        <div class="py-5 border-b border-stone-200">
-                            <p class="mb-2 text-stone-400">It’s not necessary, but if you are physically capable of doing some yoga postures, it will help your pranayama practice. Some people, because of their current health situation, start with Pranayama and then, once they are feeling strong enough, begin incorporating physical postures. Listen to your body, that is the most important thing.</p>
+                        <div class="py-5 border-b border-body-200">
+                            <p class="mb-2 text-body-400">It’s not necessary, but if you are physically capable of doing some yoga postures, it will help your pranayama practice. Some people, because of their current health situation, start with Pranayama and then, once they are feeling strong enough, begin incorporating physical postures. Listen to your body, that is the most important thing.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
+
+    <section id="instagram-feed">
     </section>
 {% endblock %}

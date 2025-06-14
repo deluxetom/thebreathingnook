@@ -73,6 +73,12 @@ COPY --link --chmod=755 ./docker/entrypoint.sh /usr/local/bin/docker-entrypoint
 # PHP config
 COPY --link ./docker/conf.d/10-app.ini $PHP_INI_DIR/app.conf.d/app_php.ini
 
+# Install nodeJS
+RUN curl -fsSL https://deb.nodesource.com/setup_23.x | bash - \
+    && apt-get install -y nodejs && \
+    node --version && \
+    npm --version
+
 ENTRYPOINT ["docker-entrypoint"]
 
 # -----------------------------------------------------
@@ -98,7 +104,8 @@ RUN install-php-extensions xdebug
 COPY --link ./docker/conf.d/20-app.local.ini $PHP_INI_DIR/app.conf.d/local_php.ini
 
 # -----------------------------------------------------
-# Production image for AWS ECS
+# Production image for AWS ECSok
+
 # -----------------------------------------------------
 FROM base AS ecs
 

@@ -14,6 +14,7 @@ use App\Service\SEO;
 use Symfony\Bridge\Twig\Attribute\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Attribute\Route;
+use Yizack\InstagramFeed;
 
 class IndexController extends AbstractController
 {
@@ -25,6 +26,11 @@ class IndexController extends AbstractController
     #[Template('home.html.twig')]
     public function index(): array
     {
+//        $feed = new InstagramFeed(
+//            'IGAAfTnVKkdVNBZAE9YNF80TmUyZAzl2Qmt2NXYwUFVjTEdxSGtKbGZAWTjBvcUFXRlowNEQ3a2xvQWoxOXpLbzktdU0zZAnBMMmZAiWWt4c1dpeHl0XzB4aUxLS01HZA0lrNnZAXdlpTQjhreGRCVWp6bUpWNzByRlBSaVRsS1MzbmVWZAwZDZD' // Paste your long-lived-access-token here
+//        );
+//        $array = $feed->getFeed(['username', 'permalink', 'timestamp', 'caption', 'media_type', 'media_url', 'thumbnail_url']);
+
         return [
             'seo' => $this->seo->home(),
         ];
