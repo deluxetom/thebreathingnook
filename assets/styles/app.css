@@ -2,13 +2,15 @@
 @import '../vendor/flowbite/dist/flowbite.min.css';
 
 @theme {
-    --color-primary-400: oklch(72.0% 0.055 100);
-    --color-primary-500: oklch(67.0% 0.062 100);
-    --color-primary-600: oklch(62.3% 0.069 100.00);
-    --color-primary-700: oklch(54.2% 0.058 100.00);
-    --color-primary-800: oklch(45.5% 0.047 100.00);
-    --color-primary-900: oklch(34.8% 0.036 100.00);
-    --color-primary-950: oklch(24.2% 0.025 100.00);
+    --color-dark-500: #143818;
+
+    --color-primary-400: oklch(0.8146 0.0853 28.22);
+    --color-primary-500: oklch(0.7741 0.0853 28.22);
+    --color-primary-600: oklch(0.7254 0.0853 28.22);
+    --color-primary-700: oklch(0.6655 0.103 28.22);
+    --color-primary-800: oklch(0.6381 0.1266 28.22);
+    --color-primary-900: oklch(0.6381 0.1535 28.22);
+    --color-primary-950: oklch(0.6321 0.1747 28.22);
 }
 
 @layer theme{
@@ -16,6 +18,19 @@
         --font-sans: "Lora", "inter", "ui-sans-serif", "system-ui", "-apple-system", "system-ui", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "Noto Sans", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
         --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
         --font-mono: "ui-monospace", "SFMono-Regular", "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", "monospace";
+    }
+}
+
+@layer components {
+    .button {
+        @apply bg-white text-dark-500 hover:bg-white/50 focus:ring-2 focus:ring-white/50 font-bold rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center;
+    }
+
+    .menu {
+        @apply space-y-6 lg:space-y-0 h-auto py-6 lg:py-0;
+    }
+    .menu-item {
+        @apply text-3xl lg:text-base font-bold
     }
 }
 
