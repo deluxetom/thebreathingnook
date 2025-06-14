@@ -2,13 +2,105 @@
 @import '../vendor/flowbite/dist/flowbite.min.css';
 
 @theme {
-    --color-primary-400: oklch(72.0% 0.055 100);
-    --color-primary-500: oklch(67.0% 0.062 100);
-    --color-primary-600: oklch(62.3% 0.069 100.00);
-    --color-primary-700: oklch(54.2% 0.058 100.00);
-    --color-primary-800: oklch(45.5% 0.047 100.00);
-    --color-primary-900: oklch(34.8% 0.036 100.00);
-    --color-primary-950: oklch(24.2% 0.025 100.00);
+    /*--color-body-50: #f9f7f7;*/
+    /*--color-body-100: #f2efee;*/
+    /*--color-body-200: #e4dddc;*/
+    /*--color-body-300: #d6cccb;*/
+    /*--color-body-400: #beadab;*/
+    /*--color-body-500: #a5918e;*/
+    /*--color-body-600: #8d7875;*/
+    /*--color-body-700: #756360;*/
+    /*--color-body-800: #625452;*/
+    /*--color-body-900: #554947;*/
+    /*--color-body-950: #2b2524;*/
+
+    --color-body-50: #f5f1f1;
+    --color-body-100: #e5dedc;
+    --color-body-200: #ccc0bc;
+    --color-body-300: #af9b95;
+    --color-body-400: #987c77;
+    --color-body-500: #8a6e6a;
+    --color-body-600: #755a59;
+    --color-body-700: #5f494a;
+    --color-body-800: #524143;
+    --color-body-900: #483b3d;
+    --color-body-950: #282022;
+
+    /* mulberry https://uicolors.app/generate/bf4a7d */
+    --color-primary-50: #fbf4f8;
+    --color-primary-100: #f9eaf3;
+    --color-primary-200: #f4d6e7;
+    --color-primary-300: #ecb5d3;
+    --color-primary-400: #de88b4;
+    --color-primary-500: #d16398;
+    --color-primary-600: #bf4a7d;
+    --color-primary-700: #a23461;
+    --color-primary-800: #872d50;
+    --color-primary-900: #712a45;
+    --color-primary-950: #441326;
+
+
+
+    /* lilac https://uicolors.app/generate/e7badf */
+    /*--color-primary-50: #faf5f9;*/
+    /*--color-primary-100: #f7ecf5;*/
+    /*--color-primary-200: #f1d9ee;*/
+    /*--color-primary-300: #e7badf;*/
+    /*--color-primary-400: #d690c9;*/
+    /*--color-primary-500: #cd7ebc;*/
+    /*--color-primary-600: #b25099;*/
+    /*--color-primary-700: #983e7d;*/
+    /*--color-primary-800: #7e3668;*/
+    /*--color-primary-900: #6b3059;*/
+    /*--color-primary-950: #3f1832;*/
+
+    /*--color-primary-50: #f6f7ee;*/
+    /*--color-primary-100: #ecedda;*/
+    /*--color-primary-200: #d9dcba;*/
+    /*--color-primary-300: #c0c591;*/
+    /*--color-primary-400: #a0a861;*/
+    /*--color-primary-500: #8a934f;*/
+    /*--color-primary-600: #6c743c;*/
+    /*--color-primary-700: #535a31;*/
+    /*--color-primary-800: #44492b;*/
+    /*--color-primary-900: #3a3f28;*/
+    /*--color-primary-950: #1e2112;*/
+
+    /*--color-primary-50: #fcfce9;*/
+    /*--color-primary-100: #f8f7cf;*/
+    /*--color-primary-200: #f1f2a4;*/
+    /*--color-primary-300: #e3e76f;*/
+    /*--color-primary-400: #d2d942;*/
+    /*--color-primary-500: #b4be24;*/
+    /*--color-primary-600: #97a21a;*/
+    /*--color-primary-700: #6b7417;*/
+    /*--color-primary-800: #555c18;*/
+    /*--color-primary-900: #484e19;*/
+    /*--color-primary-950: #262b08;*/
+
+    /*--color-primary-50: #f8fbea;*/
+    /*--color-primary-100: #eef5d2;*/
+    /*--color-primary-200: #ddecaa;*/
+    /*--color-primary-300: #c6df77;*/
+    /*--color-primary-400: #adce4d;*/
+    /*--color-primary-500: #8fb32f;*/
+    /*--color-primary-600: #6a8820;*/
+    /*--color-primary-700: #556d1e;*/
+    /*--color-primary-800: #45571d;*/
+    /*--color-primary-900: #3b4a1d;*/
+    /*--color-primary-950: #1e280b;*/
+
+    --color-secondary-50: #faf7ef;
+    --color-secondary-100: #f5f0e2;
+    --color-secondary-200: #ece0df;
+    --color-secondary-300: #dcc8c5;
+    --color-secondary-400: #c8a8a4;
+    --color-secondary-500: #b18682;
+    --color-secondary-600: #9e6f6d;
+    --color-secondary-700: #7e5252;
+    --color-secondary-800: #6b4646;
+    --color-secondary-900: #5d3e40;
+    --color-secondary-950: #321f1f;
 }
 
 @layer theme{
@@ -16,6 +108,48 @@
         --font-sans: "Lora", "inter", "ui-sans-serif", "system-ui", "-apple-system", "system-ui", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "Noto Sans", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
         --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
         --font-mono: "ui-monospace", "SFMono-Regular", "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", "monospace";
+    }
+}
+
+@layer components {
+    .button {
+        @apply bg-white text-primary-900 hover:bg-white/90 hover:outline-2 focus:ring-2 focus:ring-white/50 font-bold rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center;
+    }
+
+    .button2 {
+        @apply bg-primary-700 text-primary-100 hover:bg-primary-800 focus:ring-2 focus:ring-primary-100 font-bold rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center;
+    }
+
+    .hoverb {
+        display: inline-block;
+    }
+
+    .hoverb:after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 2px;
+        background: #FFFFFF;
+        transition: width .3s;
+    }
+
+    .hoverb:hover::after {
+        width: 100%;
+        transition: width .3s;
+    }
+
+    .mobile-menu {
+        @apply space-y-6 py-6 h-full;
+    }
+    .menu {
+        @apply space-y-6 lg:space-y-0 py-6 lg:py-0 h-dvh lg:h-auto;
+    }
+    .menu-item {
+        @apply text-3xl lg:text-base font-bold justify-start relative
+    }
+
+    .footer-logo {
+        @apply flex justify-center lg:justify-start items-center mb-4 text-2xl font-semibold text-body-100 lg:mb-0
     }
 }
 
@@ -31,5 +165,59 @@
 }
 
 body {
-    background-color: white;
+    background-color: var(--color-body-50);
 }
+
+
+.shapedividers_com-9518{
+    overflow:hidden;
+    position:relative;
+}
+.shapedividers_com-9518::before{
+    content:'';
+    font-family:'shape divider from ShapeDividers.com';
+    position: absolute;
+    z-index: 3;
+    pointer-events: none;
+    background-repeat: no-repeat;
+    bottom: -0.1vw;
+    left: -0.1vw;
+    right: -0.1vw;
+    top: -0.1vw;
+    background-size: 156% 86px;
+    background-position: 50% 100%;  background-image: url('data:image/svg+xml;charset=utf8, <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 -30 1000 130"><g fill="%23f5f1f1"><path d="M1001 20c-7-7-24-9-39-9s-30 4-44 7-29 5-44 4c-19-1-35-8-54-11-26-4-56 0-79 8s-43 17-65 26-47 16-75 16c-28 1-56-6-85-4a141 141 0 00-42 11c-12-5-24-9-39-11-25-2-50 5-76 4-25 0-48-8-67-16s-37-19-58-26-48-12-71-8c-17 3-31 10-49 11-13 1-27-1-39-4s-26-6-39-7-29 2-36 9v83h1001z"/><path d="M1001 11c-7-7-24-10-39-9s-30 4-44 7-29 5-44 4c-19-2-35-9-54-11-26-5-56 0-79 7s-43 18-65 26-47 17-75 17-56-6-85-4a141 141 0 00-42 11c-12-6-24-10-39-11-25-2-50 4-76 4-25 0-48-8-67-17s-37-18-58-26-48-12-71-7c-17 2-31 9-49 11-13 1-27-2-39-4S49 3 36 2 7 4 0 11v83l366-1h204l431 1z" opacity=".5"/></g></svg>');
+}
+
+@media (min-width:2100px){
+    .shapedividers_com-9518::before{
+        background-size: 136% calc(2vw + 86px);
+    }
+}
+
+
+
+.shapedividers_com-3049{
+    overflow:hidden;
+    position:relative;
+}
+.shapedividers_com-3049::before{
+    content:'';
+    font-family:'shape divider from ShapeDividers.com';
+    position: absolute;
+    z-index: 3;
+    pointer-events: none;
+    background-repeat: no-repeat;
+    bottom: -0.1vw;
+    left: -0.1vw;
+    right: -0.1vw;
+    top: -0.1vw;
+    background-size: 100% 62px;
+    background-position: 50% 100%;  background-image: url('data:image/svg+xml;charset=utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.28 2.17" preserveAspectRatio="none"><path d="M35.28 1.67c-3.07-.55-9.27.41-16.15 0-6.87-.4-13.74-.58-19.13.1v.4h35.28z" fill="%23f5f1f1"/><path d="M35.28 1.16c-3.17-.8-7.3.4-10.04.56-2.76.17-9.25-1.47-12.68-1.3-3.42.16-4.64.84-7.04.86C3.12 1.31 0 .4 0 .4v1.77h35.28z" opacity=".5" fill="%23f5f1f1"/><path d="M35.28.31c-2.57.84-7.68.3-11.8.43-4.1.12-6.85.61-9.57.28C11.18.69 8.3-.16 5.3.02 2.3.22.57.85 0 .87v1.2h35.28z" opacity=".5" fill="%23f5f1f1"/></svg>');
+}
+
+@media (min-width:2100px){
+    .shapedividers_com-3049::before{
+        background-size: 100% calc(2vw + 62px);
+    }
+}
+

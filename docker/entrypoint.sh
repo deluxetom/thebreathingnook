@@ -8,7 +8,8 @@ chmod +x /app/bin/console
 
 if [ "$LOCAL_VM" = "true" ];
 then
-    composer install -n --prefer-dist --no-scripts --no-progress && npm i && npm run dev
+    composer install -n --prefer-dist --no-scripts --no-progress
+    ./bin/console tailwind:build --minify
 fi
 
 chmod -R 777 /app/var
