@@ -28,7 +28,11 @@ export default class extends Controller {
     }
 
     toggle() {
-        this.toggleTransition();
+        if (this.transitioned) {
+            this.close();
+        } else {
+            this.open();
+        }
     }
 
     clickOutside() {
