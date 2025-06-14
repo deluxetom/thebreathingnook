@@ -2,15 +2,12 @@
 @import '../vendor/flowbite/dist/flowbite.min.css';
 
 @theme {
-    --color-dark-500: #143818;
+    --color-dark-500: oklch(0.4058 0.1416 260.29);
+    --color-dark-600: oklch(0.3752 0.1416 260.29);
 
     --color-primary-400: oklch(0.8146 0.0853 28.22);
     --color-primary-500: oklch(0.7741 0.0853 28.22);
     --color-primary-600: oklch(0.7254 0.0853 28.22);
-    --color-primary-700: oklch(0.6655 0.103 28.22);
-    --color-primary-800: oklch(0.6381 0.1266 28.22);
-    --color-primary-900: oklch(0.6381 0.1535 28.22);
-    --color-primary-950: oklch(0.6321 0.1747 28.22);
 }
 
 @layer theme{
@@ -23,14 +20,36 @@
 
 @layer components {
     .button {
-        @apply bg-white text-dark-500 hover:bg-white/50 focus:ring-2 focus:ring-white/50 font-bold rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center;
+        @apply bg-white text-dark-500 hover:bg-white/90 hover:outline-2 focus:ring-2 focus:ring-white/50 font-bold rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center;
+    }
+
+    .button2 {
+        @apply bg-dark-500 text-white hover:bg-dark-500/90 hover:outline-2 focus:ring-2 focus:ring-white/50 font-bold rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center;
+    }
+
+    .hoverb {
+        display: inline-block;
+    }
+
+    .hoverb:after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 2px;
+        background: #FFFFFF;
+        transition: width .3s;
+    }
+
+    .hoverb:hover::after {
+        width: 100%;
+        transition: width .3s;
     }
 
     .menu {
-        @apply space-y-6 lg:space-y-0 h-auto py-6 lg:py-0;
+        @apply space-y-6 lg:space-y-0 py-6 lg:py-0 h-dvh lg:h-auto;
     }
     .menu-item {
-        @apply text-3xl lg:text-base font-bold
+        @apply text-3xl lg:text-base font-bold justify-start relative
     }
 }
 
