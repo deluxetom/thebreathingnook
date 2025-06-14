@@ -19,6 +19,7 @@
         "symfony/runtime": ">=7.3",
         "symfony/stimulus-bundle": "^2.26.1",
         "symfony/twig-bundle": ">=7.3",
+        "symfony/ux-icons": "^2.26",
         "symfony/yaml": ">=7.3",
         "symfonycasts/tailwind-bundle": "^0.10.0",
         "tales-from-a-dev/flowbite-bundle": "^0.8.0",
