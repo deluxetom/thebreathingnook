@@ -2,12 +2,14 @@
 @import '../vendor/flowbite/dist/flowbite.min.css';
 
 @theme {
-    --color-dark-500: oklch(0.4058 0.1416 260.29);
-    --color-dark-600: oklch(0.3752 0.1416 260.29);
+    --color-dark-600: #847356;
+    --color-dark-500: #544c40;
 
-    --color-primary-400: oklch(0.8146 0.0853 28.22);
-    --color-primary-500: oklch(0.7741 0.0853 28.22);
-    --color-primary-600: oklch(0.7254 0.0853 28.22);
+    --color-primary-400: #99e6c9;
+    --color-primary-500: #90ddc0;
+    --color-primary-600: #4c987d;
+
+    --color-accent-500:#093f2b;
 }
 
 @layer theme{
@@ -20,11 +22,11 @@
 
 @layer components {
     .button {
-        @apply bg-white text-dark-500 hover:bg-white/90 hover:outline-2 focus:ring-2 focus:ring-white/50 font-bold rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center;
+        @apply bg-white text-accent-500 hover:bg-white/90 hover:outline-2 focus:ring-2 focus:ring-white/50 font-bold rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center;
     }
 
     .button2 {
-        @apply bg-dark-500 text-white hover:bg-dark-500/90 hover:outline-2 focus:ring-2 focus:ring-white/50 font-bold rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center;
+        @apply bg-primary-500 text-accent-500 hover:bg-primary-500/90 hover:outline-2 focus:ring-2 focus:ring-white/50 font-bold rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center;
     }
 
     .hoverb {
