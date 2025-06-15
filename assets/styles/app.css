@@ -27,6 +27,7 @@
     /*--color-body-900: #483b3d;*/
     /*--color-body-950: #282022;*/
 
+    /* https://uicolors.app/generate/a49f9d */
     --color-body-50: #f8f8f8;
     --color-body-100: #f1f0ef;
     --color-body-200: #e5e4e3;
@@ -38,8 +39,6 @@
     --color-body-800: #5d5957;
     --color-body-900: #504d4c;
     --color-body-950: #292726;
-
-
 
     /* mulberry https://uicolors.app/generate/bf4a7d */
     /*--color-primary-50: #fbf4f8;*/
@@ -134,7 +133,21 @@
     }
 
     .button2 {
-        @apply bg-primary-700 text-primary-100 hover:bg-primary-800 focus:ring-2 focus:ring-primary-100 font-bold rounded-lg text-sm px-5 py-2.5 justify-center inline-flex items-center;
+        @apply bg-primary-700 text-primary-100 hover:bg-primary-800 focus:ring-2 focus:ring-primary-100 font-bold rounded-lg text-sm px-5 py-2.5 justify-center inline-flex items-center transtion-all duration-300;
+        text-indent: 0px;
+    }
+
+    .button2 .icon-hover {
+        opacity: 0;
+    }
+
+    .button2:hover {
+        text-indent: -20px;
+    }
+
+    .button2:hover .icon-hover {
+        opacity: 1;
+        text-indent: 0px;
     }
 
     .hoverb {
