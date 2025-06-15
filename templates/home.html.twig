@@ -2,16 +2,18 @@
 
 {% block body %}
     <section class="relative overflow-hidden">
-        <img src="{{ asset('images/breathing-nook-sunset2-s.jpg') }}"
-             srcset="{{ asset('images/breathing-nook-sunset2-s.jpg') }} 600w, {{ asset('images/breathing-nook-sunset2-m.jpg') }} 1200w, {{ asset('images/breathing-nook-sunset2-lg.jpg') }} 2400w"
+        <img src="{{ asset('images/hero-image-lg.jpg') }}"
+             srcset="{{ asset('images/hero-image-lg.jpg') }} 600w, {{ asset('images/hero-image-lg.jpg') }} 1200w, {{ asset('images/hero-image-lg.jpg') }} 2400w"
              alt="Breathing Nook - Get in touch!" class="absolute inset-0 object-cover w-full h-full ">
         <div class="py-8 px-4 mx-auto max-w-screen-xl lg:px-6 relative">
-            <div class="max-w-screen-md min-h-96 pt-32 md:pr-12">
-                <h1 class="mb-8 md:mb-6 text-4xl leading-12 font-bold text-white">
-                    Breathwork classes focused on health and healing</h1>
+            <div class="max-w-screen-md pt-30 pb-16 md:pr-12">
+                <h1 class="flex flex-col mb-8 md:mb-6 text-3xl leading-10 font-bold text-body-100 uppercase">
+                    <span>Breathwork classes</span>
+                    <span>focused on <i>health</i> and <i>healing</i></span>
+                </h1>
                 <p class="mb-6 font-light text-white/80 md:text-lg hidden">Pranayama is the ancient practice of breath control, designed to calm the mind, energize the body, and support deep healing.</p>
                 <a href="{{ path('services') }}" data-aos="fade-in" data-aos-delay="300" class="button2">
-                    Schedule a session
+                    Free Consultation
                     <svg class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
                 </a>
             </div>
@@ -65,9 +67,9 @@
                 <div data-aos="fade-up">
                     <img src="{{ asset('images/mental-icon.png') }}" alt="Mental health icon" class="mx-auto mb-4 size-20 text-primary-600" loading="lazy">
 
-                    <h3 class="mb-4 text-xl lg:text-2xl font-bold text-body-700">Mental</h3>
-                    <p class="mb-4 text-body-500">Studies have shown that a consistent pranayama (sanskrit) practice activates the parasympathetic nervous system by reducing stress, depression and anxiety.</p>
-                    <p class="mb-4 text-body-500">By improving self-regulation, it allows for more balance - and puts people back in the driver's seat of their consciousness.</p>
+                    <h3 class="mb-4 text-xl lg:text-2xl font-bold text-body-800">Mental</h3>
+                    <p class="mb-4 text-body-600">Studies have shown that a consistent pranayama (sanskrit) practice activates the parasympathetic nervous system by reducing stress, depression and anxiety.</p>
+                    <p class="mb-4 text-body-600">By improving self-regulation, it allows for more balance - and puts people back in the driver's seat of their consciousness.</p>
                     <a href="#" class="inline-flex items-center text-sm font-medium text-primary-600 hover:text-primary-700">
                         Learn more <svg class="ml-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
                     </a>
@@ -75,8 +77,8 @@
                 <div data-aos="fade-up" data-aos-delay="150">
                     <img src="{{ asset('images/physical-icon.png') }}" alt="Physicial health icon" class="mx-auto mb-4 size-20 text-primary-600" loading="lazy">
 
-                    <h3 class="mb-4 text-xl lg:text-2xl font-bold text-body-700">Physical</h3>
-                    <p class="mb-4 text-body-500">Practicing regularly can improve lung function, reduce blood pressure, and can even help improve cardiorespiratory conditions like asthma and COPD. It also improves your sleep, which as everyone knows, is a gift that keeps on giving.</p>
+                    <h3 class="mb-4 text-xl lg:text-2xl font-bold text-body-800">Physical</h3>
+                    <p class="mb-4 text-body-600">Practicing regularly can improve lung function, reduce blood pressure, and can even help improve cardiorespiratory conditions like asthma and COPD. It also improves your sleep, which as everyone knows, is a gift that keeps on giving.</p>
                     <a href="#" class="inline-flex items-center text-sm font-medium text-primary-600 hover:text-primary-700">
                         Learn more <svg class="ml-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
                     </a>
@@ -84,8 +86,8 @@
                 <div data-aos="fade-up" data-aos-delay="300">
                     <img src="{{ asset('images/spiritual-icon.png') }}" alt="Spiritual health icon" class="mx-auto mb-4 size-20 text-primary-600" loading="lazy">
 
-                    <h3 class="mb-4 text-xl lg:text-2xl font-bold text-body-700">Spiritual</h3>
-                    <p class="mb-4 text-body-500">A regular pranayama practice increases mindfulness and can help those seeking inner peace, clarity, and calm. For those at a different stage of their journey, breath work will help you tap into divine consciousness.</p>
+                    <h3 class="mb-4 text-xl lg:text-2xl font-bold text-body-800">Spiritual</h3>
+                    <p class="mb-4 text-body-600">A regular pranayama practice increases mindfulness and can help those seeking inner peace, clarity, and calm. For those at a different stage of their journey, breath work will help you tap into divine consciousness.</p>
                     <a href="#" class="inline-flex items-center text-sm font-medium text-primary-600 hover:text-primary-700">
                         Learn more <svg class="ml-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
                     </a>
@@ -99,7 +101,7 @@
             <div class="mx-auto max-w-screen-sm mb-8 lg:mb-16">
                 <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900">Client Appreciation.</h2>
             </div>
-            <div id="testimonial-carousel" class="relative" data-carousel="slide">
+            <div id="testimonial-carousel" class="relative" data-carousel="static" data-carousel-interval="5000">
                 <div class="overflow-x-hidden overflow-y-visible relative mx-auto max-w-screen-md h-80 rounded-lg">
                     <figure class="hidden mx-auto w-full max-w-screen-md !z-0" data-carousel-item>
                         <blockquote>
